@@ -32,26 +32,30 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
 		logger.info("Homepage requested");
+		// return home.jsp
 		return "home";
 	}
-	
+
 	@RequestMapping(value = "/users", method = RequestMethod.GET)
 	public @ResponseBody List<User> getUserList() {
+		// return user list in JSON
 		return userBO.getUserList();
 	}
 
 	@RequestMapping(value = "/userid/{userId}", method = RequestMethod.GET)
 	public @ResponseBody User getUserById(@PathVariable int userId) {
+		// return a single user in JSON
 		return userBO.getUserById(userId);
 	}
-	
+
 	@RequestMapping(value = "/username/{username}", method = RequestMethod.GET)
 	public @ResponseBody User getUserByUsername(@PathVariable String username) {
+		// return a single user in JSON
 		return userBO.getUserByName(username);
 	}
-	
+
 	@RequestMapping(value = "/adduser", method = RequestMethod.POST)
-	public @ResponseBody void addUser(@RequestBody User user) {		
+	public @ResponseBody void addUser(@RequestBody User user) {
 		userBO.createUser(user);
 	}
 

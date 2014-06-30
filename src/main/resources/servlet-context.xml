@@ -43,7 +43,8 @@
 				</beans:prop>
 				<beans:prop key="hibernate.show_sql">true</beans:prop>
 				<beans:prop key="hibernate.format_sql">true</beans:prop>
-				<!-- options: creare or update -->
+				<!-- options: create or update -->
+				<!-- change to update after first run -->
 				<beans:prop key="hibernate.hbm2ddl.auto">create</beans:prop>
 				<!-- sql fixture file that runs if above option is create -->
 				<beans:prop key="hibernate.hbm2ddl.import_files">import.sql</beans:prop>

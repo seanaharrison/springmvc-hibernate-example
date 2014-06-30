@@ -27,6 +27,7 @@ public class UserDAO {
 	}
 
 	public List<User> getUserList() {
+		//query by object type User
 		Criteria criteria = this.getSessionFactory().getCurrentSession()
 				.createCriteria(User.class);
 		@SuppressWarnings("unchecked")
@@ -42,7 +43,9 @@ public class UserDAO {
 	public User getUserByName(String username) {
 		Criteria criteria = sessionFactory.getCurrentSession().createCriteria(
 				User.class);
+		//search by field username
 		criteria.add(Restrictions.eq("username", username));
+		//return unique result
 		User user = (User) criteria.uniqueResult();
 		return user;
 	}
