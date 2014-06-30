@@ -2,6 +2,7 @@ springmvc-hibernate-example
 ===========================
 
 Restful Spring MVC Hibernate example also uses jquery, mysql and bootstrap.
+![ScreenShot](https://raw.githubusercontent.com/seana7a7/springmvc-hibernate-example/master/src/main/webapp/img/screen-shot.png)
 
 ##Setup
 1.  Download and install Spring Tool Suite http://spring.io/tools/sts
